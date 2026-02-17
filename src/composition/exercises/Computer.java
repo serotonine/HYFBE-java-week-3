@@ -7,6 +7,20 @@ package composition.exercises;
  3. In main(), create a Computer and call processData() through it.
 */
 
-public class Computer
+class Computer
 {
+   private final Processor processor;
+    Computer(){
+        this.processor = new Processor();
+    }
+    public void start(){
+        this.processor.processData();
+        System.out.println("Computer started.");
+    }
+}
+
+class Processor{
+    public void processData(){
+        System.out.println("Processor is processing datas...");
+    }
 }

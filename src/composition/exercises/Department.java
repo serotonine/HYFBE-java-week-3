@@ -1,7 +1,9 @@
 package composition.exercises;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- TODO:
  1. Create class Employee with fields: name, role.
  2. Create class Department that HAS-A List<Employee>.
  3. Create class Company that HAS-A List<Department>.
@@ -11,6 +13,44 @@ package composition.exercises;
  5. Test with multiple departments and employees.
 */
 
-public class Department
+class Department
 {
+    private final List<Employee> employees;
+    String departmentName;
+    public Department(String departmentName){
+        this.employees = new ArrayList<>();
+        this.departmentName = departmentName;
+    }
+    public void hire(String name, String role){
+        this.employees.add(new Employee(name, role));
+        System.out.println(name + " has been hired as " + role);
+    }
+
+
+    public void listEmployees(){
+        for(Employee employee: this.employees){
+            System.out.println(employee.getName() + " : " + employee.getRole());
+        }
+    }
+}
+
+
+class Employee
+{
+    private String name;
+    private String role;
+
+    public Employee(){
+        this("Anonymous", "internship");
+    }
+    public Employee(String name, String role){
+        this.name = name;
+        this.role = role;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public String getRole(){
+        return this.role;
+    }
 }
