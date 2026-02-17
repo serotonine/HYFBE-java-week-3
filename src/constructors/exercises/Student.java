@@ -12,4 +12,21 @@ package constructors.exercises;
 
 public class Student
 {
+    private String name;
+    private static int studentCount= 0;
+    private int id;
+
+    public Student(){
+        this("Nobody");
+    }
+    public Student(String name){
+        this.name = name;
+        id = ++studentCount;
+    }
+    public void getStudentInfo(){
+        System.out.printf("Student name: %s - student id: %d%n", this.name, this.id);
+    }
+    public static int getTotalStudents(){
+        return studentCount;
+    }
 }
