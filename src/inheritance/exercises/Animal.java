@@ -1,7 +1,6 @@
 package inheritance.exercises;
 
 /**
- TODO:
  1. Create a superclass Animal with:
       - method makeSound() → prints "Some sound...".
  2. Create subclasses Dog and Cat that override makeSound().
@@ -10,4 +9,21 @@ package inheritance.exercises;
 
 public class Animal
 {
+    public void makeSound(){
+        System.out.println("Animal makes sound.");
+    }
+}
+
+class Dog extends Animal{
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks.");
+    }
+}
+
+class Cat extends Animal{
+    @Override
+    public void makeSound() {
+        System.out.println("Cat barks.");
+    }
 }
