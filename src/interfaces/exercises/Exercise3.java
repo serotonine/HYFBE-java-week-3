@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * TODO:
  * Exercise 3:
  * Create two interfaces: Flyable and Swimmable, each with a method (fly(), swim()).
  * Implement them in classes: Bird (can fly), Fish (can swim), and Duck (can both fly & swim).
