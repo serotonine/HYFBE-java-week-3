@@ -11,6 +11,12 @@ public class Exercise5
     public static void main(String[] args)
     {
         int age = -5; // test value
+        try{
+            checkAge(age);
+        }
+        catch(InvalidAgeException e){
+            System.out.println(e.toString());
+        }
 
         // Check age and handle exception
     }
