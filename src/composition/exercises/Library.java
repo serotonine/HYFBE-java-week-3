@@ -23,14 +23,14 @@ class Library
     }
     public void  listBooks() {
         for(Book book:this.bookCollection.values()){
-            System.out.println(book.printDetail());
+            book.printInfo();
         }
     }
 }
 
 class Book{
-    String title;
-    String author;
+    private String title;
+    private String author;
 
     public Book(){
         this("unknown","unknown");
@@ -39,7 +39,7 @@ class Book{
         this.title = title;
         this.author = author;
     }
-    public String printDetail(){
-        return this.title + " | Author: " + this.author ;
+    public void printInfo(){
+        System.out.println(this.title + " | Author: " + this.author);
     }
 }
