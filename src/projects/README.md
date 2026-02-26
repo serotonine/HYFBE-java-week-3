@@ -41,7 +41,7 @@
     * Abstract class: `Animal` (method `makeSound()`).
     * Subclasses: `Lion`, `Monkey`, `Penguin`.
     * Store animals in a `List<Animal>` (demonstrating **polymorphism**).
-    * Features: feed animals, display zoo inventory.
+    * Features: eat animals, display zoo inventory.
 
 ---
 
@@ -90,3 +90,8 @@
 ---
 
 
+1st project: ISBN can be String
+3rd project: no calculation of GPA, print course students
+4rd project: Cart doesn't have a list, only Map
+5th project: instead of feedAnimals, 'eat' is better.
+6th project: keep the whole music list, not a top 10 algorithm :)
